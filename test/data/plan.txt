@@ -1,0 +1,129 @@
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but
+will not be persisted to local or remote state storage.
+
+[0m[1mmodule.XYZ_XUDXYZA5007_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5004_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5000_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5003_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5007_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5002_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5002_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5004_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5000_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5012_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5011_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5003_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5008_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5001_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5012_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5011_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5001_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5008_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5009_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5010_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5006_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5005_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XUDXYZA5009_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.net: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5006_user_data.data.template_file.linux: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5010_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1mmodule.XYZ_XMDXYZA5005_user_data.data.template_file.windows: Refreshing state...[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5011_Application_sdf: Refreshing state... (ID: vol-01d59bd9d16f495c2)[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5001_Web_sdf: Refreshing state... (ID: vol-0fedbaba21cb98f64)[0m
+[0m[1maws_s3_bucket.XYZ_bucket: Refreshing state... (ID: ccna-minutemaid-mml-dev)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5010: Refreshing state... (ID: i-0c21bf74e0b49e9da)[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5005_Application_sdf: Refreshing state... (ID: vol-0bb369714cf554fa2)[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5004_Database_sdf: Refreshing state... (ID: vol-061b928213e58f1b9)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5012: Refreshing state... (ID: i-0218ceb56734b5a13)[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5000_Web_sdf: Refreshing state... (ID: vol-04f295ebc1961e9ac)[0m
+[0m[1mdata.aws_ami.redhat: Refreshing state...[0m
+[0m[1mdata.aws_ami.windows_2012_amazon: Refreshing state...[0m
+[0m[1maws_instance.XYZ_XMDXYZA5003: Refreshing state... (ID: i-01e6b57a20fd06597)[0m
+[0m[1maws_instance.XYZ_XUDXYZA5008: Refreshing state... (ID: i-048b7a1c7b6fb60ba)[0m
+[0m[1mdata.aws_ami.windows_2008_amazon: Refreshing state...[0m
+[0m[1maws_ebs_volume.XYZ_XMDXYZA5012_Web_sdf: Refreshing state... (ID: vol-0b223b3f0673216ad)[0m
+[0m[1maws_instance.XYZ_XUDXYZA5007: Refreshing state... (ID: i-09d69d60918dd8c84)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5004: Refreshing state... (ID: i-077d78ce29121656c)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5011: Refreshing state... (ID: i-0d8655bdcc3b0e99b)[0m
+[0m[1maws_instance.XYZ_XUDXYZA5009: Refreshing state... (ID: i-05ac068b75b59a2d8)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5001: Refreshing state... (ID: i-0fdff17ec37affabf)[0m
+[0m[1maws_instance.XYZ_XUDXYZA5002: Refreshing state... (ID: i-009652b8a075cd450)[0m
+[0m[1mdata.aws_ami.amazon_linux: Refreshing state...[0m
+[0m[1maws_instance.XYZ_XMDXYZA5000: Refreshing state... (ID: i-00283026245e2171c)[0m
+[0m[1maws_instance.XYZ_XMDXYZA5005: Refreshing state... (ID: i-019745466dd654df3)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5012_Web_sdf_attachment: Refreshing state... (ID: vai-4106492933)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5004_Database_sdf_attachment: Refreshing state... (ID: vai-3903583388)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5011_Application_sdf_attachment: Refreshing state... (ID: vai-2790157018)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5001_Web_sdf_attachment: Refreshing state... (ID: vai-173045560)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5000_Web_sdf_attachment: Refreshing state... (ID: vai-2354509661)[0m
+[0m[1maws_volume_attachment.XYZ_XMDXYZA5005_Application_sdf_attachment: Refreshing state... (ID: vai-186186938)[0m
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed. Cyan entries are data sources to be read.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+"apply" is called, Terraform can't guarantee this is what will execute.
+
+[32m+ aws_ebs_volume.XYZ_XMDXYZA5006_Application_sdf
+[0m    availability_zone: "us-east-2a"
+    encrypted:         "true"
+    iops:              "<computed>"
+    kms_key_id:        "<computed>"
+    size:              "100"
+    snapshot_id:       "<computed>"
+    type:              "<computed>"
+[0m
+[0m[32m+ aws_instance.XYZ_XMDXYZA5006
+[0m    ami:                                   "ami-cf9722af"
+    associate_public_ip_address:               "<computed>"
+    availability_zone:                         "<computed>"
+    disable_api_termination:                   "false"
+    ebs_block_device.#:                        "<computed>"
+    ephemeral_block_device.#:                  "<computed>"
+    iam_instance_profile:                      "XYZ_NonProd_Application_InstanceProfile"
+    instance_state:                            "<computed>"
+    instance_type:                             "t2.medium"
+    key_name:                                  "myKey"
+    network_interface_id:                      "<computed>"
+    placement_group:                           "<computed>"
+    private_dns:                               "<computed>"
+    private_ip:                                "10.237.2.144"
+    public_dns:                                "<computed>"
+    public_ip:                                 "<computed>"
+    root_block_device.#:                       "1"
+    root_block_device.0.delete_on_termination: "false"
+    root_block_device.0.iops:                  "<computed>"
+    root_block_device.0.volume_size:           "50"
+    root_block_device.0.volume_type:           "gp2"
+    security_groups.#:                         "<computed>"
+    source_dest_check:                         "true"
+    subnet_id:                                 "subnet-35880451"
+    tags.%:                                    "9"
+    tags.ApplicationCode:                      "MML"
+    tags.ApplicationId:                        "UID12345789"
+    tags.BackupInterval:                       "30"
+    tags.BackupLifespan:                       "336"
+    tags.CostCenter:                           "<BOGUS>"
+    tags.DRClass:                              "DR2"
+    tags.Environment:                          "DEV"
+    tags.Name:                                 "XMDXYZA5006"
+    tags.SecClass:                             "Highly Restricted"
+    tenancy:                                   "<computed>"
+    user_data:                                 "421be7f4894ede67f7b60b53c1f573b61abe8cf9"
+    vpc_security_group_ids.#:                  "2"
+    vpc_security_group_ids.1656255801:         "sg-586e7821"
+    vpc_security_group_ids.3945185533:         "sg-24a9b85d"
+[0m
+[0m[32m+ aws_volume_attachment.XYZ_XMDXYZA5006_Application_sdf_attachment
+[0m    device_name:  "/dev/sdf"
+    force_detach: "<computed>"
+    instance_id:  "<computed>"
+    skip_destroy: "<computed>"
+    volume_id:    "<computed>"
+[0m
+[0m
+[0m[1mPlan:[0m 3 to add, 0 to change, 0 to destroy.[0m
