@@ -101,7 +101,7 @@ Note: You didn't specify an "-out" parameter to save this plan, so when
     root_block_device.0.volume_type:           "gp2"
     security_groups.#:                         "<computed>"
     source_dest_check:                         "true"
-    subnet_id:                                 "subnet-35880451"
+    subnet_id:                                 "subnet-11122233"
     tags.%:                                    "9"
     tags.ApplicationCode:                      "MML"
     tags.ApplicationId:                        "UID12345789"
@@ -115,8 +115,8 @@ Note: You didn't specify an "-out" parameter to save this plan, so when
     tenancy:                                   "<computed>"
     user_data:                                 "421be7f4894ede67f7b60b53c1f573b61abe8cf9"
     vpc_security_group_ids.#:                  "2"
-    vpc_security_group_ids.1656255801:         "sg-586e7821"
-    vpc_security_group_ids.3945185533:         "sg-24a9b85d"
+    vpc_security_group_ids.1656255801:         "sg-12312312"
+    vpc_security_group_ids.3945185533:         "sg-45a98b5d"
 [0m
 [0m[32m+ aws_volume_attachment.XYZ_XMDXYZA5006_Application_sdf_attachment
 [0m    device_name:  "/dev/sdf"
