@@ -52,6 +52,20 @@ describe('lib', function() {
         expect(this.result.add.aws_ebs_volume.XYZ_XMDXYZA5006_Application_sdf.encrypted).to.be.a( 'boolean' );
       });
     });
+    describe('aws_instance type', function() {
+      it('should have an add aws_instance property', function() {
+        expect(this.result.add).to.contain.all.keys( 'aws_instance' );
+      });
+      it('should have an add aws_instance.XYZ_XMDXYZA5006 property', function() {
+        expect(this.result.add.aws_instance).to.contain.all.keys( 'XYZ_XMDXYZA5006' );
+      });
+      it('aws_instance instance should have an add encrypted property', function() {
+        expect(this.result.add.aws_instance.XYZ_XMDXYZA5006).to.contain.all.keys( 'private_ip' );
+      });
+      it('aws_instance encrypted property should be a boolean', function() {
+        expect(this.result.add.aws_instance.XYZ_XMDXYZA5006.private_ip).to.equal( '10.237.2.144' );
+      });
+    });
   });
 });
 
