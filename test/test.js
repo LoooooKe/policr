@@ -29,14 +29,33 @@ describe('lib', function() {
     });
   });
   describe('Parsing results', function() {
+    describe('Handle delete cases', function() {
+      before(function() {
+        this.data = fs.readFileSync( `${__dirname}/data/no-hash-node.txt`, 'utf8' );
+        this.plan = new Plan();
+        this.result = this.plan.parse( this.data );
+      });
+      it('should have add, rep, mod, del properties', function() {
+        expect(this.result).to.have.all.keys('add', 'rep', 'mod', 'del');
+      });
+      it('should have a del key of type object', function() {
+        expect( this.result.del ).to.be.an('object');
+      });
+      it('should have a del key with keys aws_autoscaling_group and aws_launch_configuration', function() {
+        expect( this.result.del ).to.have.all.keys( [ 'aws_autoscaling_group', 'aws_launch_configuration' ] );
+      });
+      it('should have a aws_autoscaling_group.XYZ_Application_AutoscaleGroup key', function() {
+        expect( this.result.del.aws_autoscaling_group ).to.have.all.keys( [ 'XYZ_Application_AutoscaleGroup' ] );
+      });
+      it('should have a aws_launch_configuration.XYZ_Application_LaunchConfiguration key', function() {
+        expect( this.result.del.aws_launch_configuration ).to.have.all.keys( [ 'XYZ_Application_LaunchConfiguration' ] );
+      });
+    });
     before(function() {
       this.data = fs.readFileSync( `${__dirname}/data/plan.txt`, 'utf8' );
       this.plan = new Plan();
       this.result = this.plan.parse( this.data );
       // console.log( JSON.stringify( this.result.add, null, 2 ) );
-    });
-    it('should have add, rep, mod, del properties', function() {
-      expect(this.result).to.have.all.keys('add', 'rep', 'mod', 'del');
     });
     describe('aws_ebs_volume type', function() {
       it('should have an add aws_ebs_volume property', function() {
