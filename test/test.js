@@ -20,7 +20,7 @@ describe('lib', function() {
   });
   describe('Plan parsing', function() {
     before(function() {
-      this.data = fs.readFileSync( `${__dirname}/data/plan.txt`, 'utf8' );
+      this.data = fs.readFileSync( `${__dirname}/data/plan/plan.txt`, 'utf8' );
       this.plan = new Plan();
     });
     it('should parse a plan.txt to an object', function() {
@@ -31,7 +31,7 @@ describe('lib', function() {
   describe('Parsing results', function() {
     describe('Handle delete cases', function() {
       before(function() {
-        this.data = fs.readFileSync( `${__dirname}/data/no-hash-node.txt`, 'utf8' );
+        this.data = fs.readFileSync( `${__dirname}/data/plan/no-hash-node.txt`, 'utf8' );
         this.plan = new Plan();
         this.result = this.plan.parse( this.data );
       });
@@ -52,7 +52,7 @@ describe('lib', function() {
       });
     });
     before(function() {
-      this.data = fs.readFileSync( `${__dirname}/data/plan.txt`, 'utf8' );
+      this.data = fs.readFileSync( `${__dirname}/data/plan/plan.txt`, 'utf8' );
       this.plan = new Plan();
       this.result = this.plan.parse( this.data );
       // console.log( JSON.stringify( this.result.add, null, 2 ) );
