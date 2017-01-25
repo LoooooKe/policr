@@ -165,6 +165,7 @@ describe('lib', function() {
         this.data = fs.readFileSync( `${__dirname}/data/apply/db/terraform.tfstate`, 'utf8' );
         this.state = new State();
         this.result = this.state.parse( this.data );
+        debug( '%j', this.result );
       });
       it('should have a resource property', function() {
         expect(this.result).to.have.all.keys('resource');
