@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "8"
-before_install: npm install -g grunt-cli
+before_install: npm install -g grunt-cli codecov
 install: npm install
 before_script: grunt build
+script:
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - codecov
