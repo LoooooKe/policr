@@ -1,5 +1,7 @@
 # Cloudtool based on [Terraform](http://terraform.io)
 
+[![Build Status](https://travis-ci.org/LoooooKe/cloudtool.svg?branch=develop)](https://travis-ci.org/LoooooKe/cloudtool)
+
 ## Build
     git checkout -b develop origin/develop
 
