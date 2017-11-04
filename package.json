@@ -1,0 +1,53 @@
+{
+  "name": "cloudtool",
+  "version": "0.1.0",
+  "description": "Tool for testing and provisioning with terraform as provisioner",
+  "main": "lib/cloudtool.js",
+  "directories": {
+    "lib": "lib",
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "4.1.2",
+    "chai-string": "1.4.0",
+    "child_process": "1.0.2",
+    "cli": "1.0.1",
+    "exit": "0.1.2",
+    "jsonpath-plus": "0.16.0",
+    "lodash": "4.17.4",
+    "traverse": "0.6.6",
+    "strip-ansi": "4.0.0",
+    "clone-deep": "1.0.0",
+    "mocha-jenkins-reporter": "0.3.10",
+    "mocha": "4.0.1",
+    "grunt": "1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-run": "0.8.0",
+    "grunt-contrib-compress": "1.4.3",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-mocha-test": "0.13.3"
+  },
+  "devDependencies": {
+    "pkg": "4.2.5",
+    "debug": "3.1.0"
+  },
+  "scripts": {
+    "postinstall": "grunt clean",
+    "test": "npm --version"
+  },
+  "keywords": [
+    "terraform",
+    "test",
+    "testing",
+    "continuous",
+    "compliance",
+    "cc"
+  ],
+  "author": "Lukas Feuz",
+  "email": "feuzl1@bluewin.ch",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "8.3.0"
+  }
+}
