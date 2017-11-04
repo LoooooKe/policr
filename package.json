@@ -26,7 +26,8 @@
     "grunt-run": "0.8.0",
     "grunt-contrib-compress": "1.4.3",
     "grunt-contrib-clean": "1.1.0",
-    "grunt-mocha-test": "0.13.3"
+    "grunt-mocha-test": "0.13.3",
+    "sinon": "4.1.1"
   },
   "devDependencies": {
     "pkg": "4.2.5",
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "postinstall": "grunt clean",
-    "test": "npm --version"
+    "test": "node node_modules/mocha/bin/mocha test/ test/tf-parse/"
   },
   "keywords": [
     "terraform",
