@@ -49,6 +49,9 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
           'run:package',
           'compress:main',
+          'test',
           'clean'
     ]);
+
+    grunt.registerTask('test', ['mochaTest']);
 };
