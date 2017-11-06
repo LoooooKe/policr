@@ -6,7 +6,8 @@
   "directories": {
     "lib": "lib",
     "example": "example",
-    "test": "test"
+    "test": "test",
+    "doc": "doc"
   },
   "dependencies": {
     "chai": "4.1.2",

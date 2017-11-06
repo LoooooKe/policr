@@ -25,3 +25,7 @@ node_modules
 
 # Optional npm cache directory
 .npm
+
+#intellij
+*.iml
+.idea

@@ -1,7 +1,11 @@
-# Cloudtool based on [Terraform](http://terraform.io)
+# ![Policr Logo](/doc/images/ccc-logo.png) Policr
+A continuous compliance tool based on [Terraform](http://terraform.io)
 
 [![Build Status](https://travis-ci.org/LoooooKe/cloudtool.svg?branch=develop)](https://travis-ci.org/LoooooKe/cloudtool)
 [![codecov](https://codecov.io/gh/LoooooKe/cloudtool/branch/develop/graph/badge.svg)](https://codecov.io/gh/LoooooKe/cloudtool)
+
+## Basic concept
+![Policr workflow](/doc/images/ccc-workflow.png)
 
 ## Build
     git checkout -b develop origin/develop
