@@ -1,4 +1,4 @@
-# ![Policr Logo](/doc/images/ccc-logo.png) Policr
+# Policr
 A continuous compliance tool based on [Terraform](http://terraform.io)
 
 [![Build Status](https://travis-ci.org/LoooooKe/cloudtool.svg?branch=develop)](https://travis-ci.org/LoooooKe/cloudtool)
