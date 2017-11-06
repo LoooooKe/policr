@@ -55,6 +55,6 @@ Report issues and bugs directly in this GitHub project.
 ## Credits
 This is a collaboration between the [Scigility](http://www.scigility.com) and [Developers of Swiss Postal IT](http://www.swisspush.org/).
 
-##License
+## License
 The project is licensed under the Apache License, version 2.0.
 
