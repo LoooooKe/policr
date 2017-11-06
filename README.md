@@ -46,3 +46,15 @@ Executes a terrafrom destroy -f command.
      
      Commands:
        apply, destroy, force-unlock, init, plan, state
+       
+## Contributing
+Contributions to the code, examples, documentation, etc, are very much appreciated. For more information, see the contribution guidelines.
+
+Report issues and bugs directly in this GitHub project.
+
+## Credits
+This is a collaboration between the [Scigility](http://www.scigility.com) and [Developers of Swiss Postal IT](http://www.swisspush.org/).
+
+##License
+The project is licensed under the Apache License, version 2.0.
+
