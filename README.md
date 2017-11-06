@@ -36,7 +36,7 @@ Executes a terrafrom destroy -f command.
 
 ### CLI
     Usage:
-       cloudtool.js [OPTIONS] <command> [ARGS]
+       policr.js [OPTIONS] <command> [ARGS]
      
      Options:
        -t, --tests STRING     tests

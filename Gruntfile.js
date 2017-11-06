@@ -1,17 +1,14 @@
 module.exports = function(grunt) {
-    var pkgJson = require('./package.json');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        project_version: pkgJson.version,
-        node_version: pkgJson.engines.node,
         run: {
             package: {
                 cmd: 'node',
                 args: [
                     'node_modules/pkg/lib-es5/bin.js',
                     '--out-path=build/temp',
-                    '--targets=node<%= node_version %>-win-x64,node<%= node_version %>-linux-x64,node<%= node_version %>-macos-x64',
+                    '--targets=node<%= pkg.engines.node %>-win-x64,node<%= pkg.engines.node %>-linux-x64,node<%= pkg.engines.node %>-macos-x64',
                     'lib/<%= pkg.name %>.js'
                 ]
             }
@@ -19,7 +16,7 @@ module.exports = function(grunt) {
         compress: {
             main: {
               options: {
-                archive: 'build/<%= pkg.name %>-<%= project_version %>.zip',
+                archive: 'build/<%= pkg.name %>-<%= pkg.version %>.zip',
                 mode: 'zip'
               },
               files: [
