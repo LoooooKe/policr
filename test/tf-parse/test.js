@@ -5,9 +5,10 @@ const debug = require('debug')('tfparse/test');
 
 const expect = chai.expect;
 
-const Plan = require('../../../lib/supplier/tf/plan.js');
-const Apply = require('../../../lib/supplier/tf/apply.js');
-const State = require('../../../lib/supplier/tf/state.js');
+const tfParse = require('../../lib/tf-parse');
+const Plan = tfParse.Plan;
+const Apply = tfParse.Apply;
+const State = tfParse.State;
 
 describe('lib', function() {
   describe('Plan', function() {
@@ -22,7 +23,7 @@ describe('lib', function() {
   });
   describe('Plan parsing', function() {
     before(function() {
-      this.data = fs.readFileSync('./test/supplier/tf/data/plan/plan.txt', 'utf8' );
+      this.data = fs.readFileSync( `${__dirname}/data/plan/plan.txt`, 'utf8' );
       this.plan = new Plan();
     });
     it('should parse a plan.txt to an object', function() {
@@ -33,7 +34,7 @@ describe('lib', function() {
   describe.skip('Parsing results', function() {
     describe('Handle delete cases', function() {
       before(function() {
-        this.data = fs.readFileSync('./test/supplier/tf/data/plan/no-hash-node.txt', 'utf8' );
+        this.data = fs.readFileSync( `${__dirname}/data/plan/no-hash-node.txt`, 'utf8' );
         this.plan = new Plan();
         this.result = this.plan.parse( this.data );
       });
@@ -54,7 +55,7 @@ describe('lib', function() {
       });
     });
     before(function() {
-      this.data = fs.readFileSync( './test/supplier/tf/data/plan/plan.txt', 'utf8' );
+      this.data = fs.readFileSync( `${__dirname}/data/plan/plan.txt`, 'utf8' );
       this.plan = new Plan();
       this.result = this.plan.parse( this.data );
     });
@@ -98,7 +99,7 @@ describe('lib', function() {
     });
     describe.skip('Parsing results', function() {
       before( function() {
-        this.data = fs.readFileSync( './test/supplier/tf/data/apply/db/apply.txt', 'utf8' );
+        this.data = fs.readFileSync( `${__dirname}/data/apply/db/apply.txt`, 'utf8' );
         this.apply = new Apply();
         this.result = this.apply.parse( this.data );
       });
@@ -161,7 +162,7 @@ describe('lib', function() {
 
     describe.skip('Parsing results', function() {
       before( function() {
-        this.data = fs.readFileSync( './test/supplier/tf/data/apply/db/terraform.tfstate', 'utf8' );
+        this.data = fs.readFileSync( `${__dirname}/data/apply/db/terraform.tfstate`, 'utf8' );
         this.state = new State();
         this.result = this.state.parse( this.data );
         debug( '%j', this.result );
@@ -202,5 +203,7 @@ describe('lib', function() {
       });
     });
   });
+
+  
 });
 

@@ -7,7 +7,7 @@ var AWS = require('aws-sdk-mock');
 
 var Q = require('q');
 
-var AWSRunner = require('../../../lib/importer/aws/awsImporter.js');
+var AWSRunner = require('../../lib/aws/awsrunner.js');
 
 describe('Basic AWSRunner tests', function() {
     var awsr = new AWSRunner();
