@@ -41,7 +41,9 @@
     "pkg": "4.2.5",
     "debug": "3.1.0",
     "aws-sdk-mock": "1.7.0",
-    "sinon": "4.1.2"
+    "sinon": "4.1.2",
+    "mock-fs": "4.4.2",
+    "mock-spawn": "0.2.6"
   },
   "scripts": {
     "postinstall": "grunt clean",
