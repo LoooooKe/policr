@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         clean:['build/temp'],
         mochaTest: {
             test: {
-              src: ['test/**/*.js']
+              src: ['./test/**/*.js']
             }
           }
     });

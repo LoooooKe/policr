@@ -45,7 +45,7 @@
   },
   "scripts": {
     "postinstall": "grunt clean",
-    "test": "node node_modules/mocha/bin/mocha --recursive test/"
+    "test": "node node_modules/mocha/bin/mocha ./test/**/*.js"
   },
   "keywords": [
     "terraform",
