@@ -2,13 +2,13 @@ var sinon = require('sinon');
 var chai = require('chai');
 var expect = chai.expect;
 
-var TerraformSupplier = require('../../../lib/supplier/tf/tfSupplier.js');
+var TerraformRunner = require('../../../lib/importer/tf/tfRunner');
 
 describe('TerrafromRunner tests', function() {
-    var tf = new TerraformSupplier('.');
+    var tf = new TerraformRunner('.');
     describe('Test available methods', function(){
         it('should return a new object', function() {
-            expect(tf).to.be.an.instanceof(TerraformSupplier);
+            expect(tf).to.be.an.instanceof(TerraformRunner);
         });
         it('should have a plan method', function() {
             expect(tf.plan).to.be.a('function');
@@ -45,7 +45,7 @@ describe('TerrafromRunner tests', function() {
         };
         var tf = null;
         beforeEach('create terraformrunner mock', function() {
-            tf = new TerraformSupplier('.');
+            tf = new TerraformRunner('.');
         });
         it("Execute terraform plan", function(){
             sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform plan'));
