@@ -20,19 +20,19 @@ describe('TerrafromRunner tests', function() {
             expect(tf.refresh).to.be.a('function');
         });
         it('should have a init method', function() {
-            expect(tf.init).to.be.a('function');
+            expect(tf.init).to.not.be.a('function');
         });
         it('should have a unlock method', function() {
-            expect(tf.unlock).to.be.a('function');
+            expect(tf.unlock).to.not.be.a('function');
         });
         it('should have a apply method', function() {
-            expect(tf.apply).to.be.a('function');
+            expect(tf.apply).to.not.be.a('function');
         });
         it('should have a execute method', function() {
             expect(tf.execute).to.be.a('function');
         });
         it('should have a destroy method', function() {
-            expect(tf.destroy).to.be.a('function');
+            expect(tf.destroy).to.not.be.a('function');
         });
     });
     describe('Execute terraform commands', function() {
@@ -55,36 +55,10 @@ describe('TerrafromRunner tests', function() {
             sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform refresh'));
             tf.state();
         });
-        it("Execute terraform destroy", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform destroy -force'));
-            tf.destroy();
-        });
-        it("Execute terraform init", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform init'));
-            tf.init();
-        });
+
         it("Execute terraform refresh", function(){
             sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform refresh'));
             tf.refresh();
-        });
-        it("Execute terraform apply", function(){
-            var first = true;
-            sinon.stub(tf, 'execute').callsFake(function(cmd, callback) {
-                if(first) {
-                    expect(cmd).to.eql('terraform plan');
-                    first = false;
-                } else
-                    expect(cmd).to.eql('terraform apply');
-                if(callback)
-                    callback();
-            });
-            tf.apply(function(callback){
-                callback();
-            });
-        });
-        it("Execute terraform unlock", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform force-unlock 1'));
-            tf.unlock(1);
         });
     });
 });
