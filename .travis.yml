@@ -10,7 +10,7 @@ script:
 deploy:
      provider: releases
      api_key:
-         secure: #DEPLOY_TOKEN
+         secure: $DEPLOY_TOKEN
      file:
          - policr.zip
      skip_cleanup: true
