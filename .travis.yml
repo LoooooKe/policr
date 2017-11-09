@@ -7,3 +7,13 @@ before_script: grunt build
 script:
   - istanbul cover ./node_modules/mocha/bin/_mocha ./test/**/*.js --reporter
   - codecov
+deploy:
+     provider: releases
+     api_key:
+         secure: #DEPLOY_TOKEN
+     file:
+         - policr.zip
+     skip_cleanup: true
+     on:
+         repo: LoooooKe/policr
+         tags: true
