@@ -13,26 +13,26 @@ Policr is a continuous compliance tool for Cloud Infrastructure. This tool helps
     grunt build
 
 ## Usage
-### Plan (Unit tests)
+### tf-plan
 To check terraform scripts locally without deploying it to the provider, use the *plan* mode.
 Therefore one has to write js tests using mocha testing and chai assertions.
 
-See examples in the test branch: [ Tests ](https://github.com/LoooooKe/cloudtool/tree/develop/examples/)
+See examples in the test branch: [ Tests ](https://github.com/LoooooKe/policr/tree/develop/examples/)
 
-### State (Integration tests)
+### tf-state
 To check an actual deployment on the provider using the terraform state, one can use the *state* mode.
 Tests are also based on mocha testing and chai assertions and are fully compatible with the unit tests from plan mode.
 
 To check terraform scripts locally without deploying it to the provider, user the plan mode. 
 Therefore one has to write js tests using mocha testing and chai assertions.
 
-See examples in the test branch: [ Tests ](https://github.com/LoooooKe/cloudtool/tree/develop/examples/)
+See examples in the test branch: [ Tests ](https://github.com/LoooooKe/policr/tree/develop/examples/)
 
-### Apply
-Executes a terraform plan including tests and afterwards the terraform apply command.
+### aws
+todo
 
-### Destory
-Executes a terrafrom destroy -f command.
+### cf
+todo
 
 ### CLI
     Usage:
@@ -41,11 +41,10 @@ Executes a terrafrom destroy -f command.
      Options:
        -t, --tests STRING     tests
        -w, --workdir [STRING] workdir (Default is .)
-       -s, --skipTests TRUE   skipTests
        -h, --help             Display help and usage details
      
      Commands:
-       apply, destroy, force-unlock, init, plan, state
+       tf-plan, tf-state, aws, cf
        
 ## Contributing
 Contributions to the code, examples, documentation, etc, are very much appreciated. For more information, see the contribution guidelines.
