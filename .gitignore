@@ -30,3 +30,5 @@ node_modules
 *.iml
 .idea
 /lib/aws/.proxy.js
+/lib/importer/aws/.proxy.js
+/test-reports

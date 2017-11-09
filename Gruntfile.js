@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         compress: {
             main: {
               options: {
-                archive: 'build/<%= pkg.name %>-<%= pkg.version %>.zip',
+                archive: 'build/<%= pkg.name %>.zip',
                 mode: 'zip'
               },
               files: [
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         clean:['build/temp'],
         mochaTest: {
             test: {
-              src: ['test/**/*.js']
+              src: ['./test/**/*.js']
             }
           }
     });

@@ -1,6 +1,6 @@
 {
   "name": "policr",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Cli tool for testing and provisioning with terraform as provisioner",
   "main": "lib/policr.js",
   "directories": {
@@ -26,6 +26,7 @@
     "grunt-contrib-compress": "1.4.3",
     "grunt-mocha-test": "0.13.3",
     "grunt-run": "0.8.0",
+    "istanbul": "^0.4.5",
     "jsonpath-plus": "0.16.0",
     "lodash": "4.17.4",
     "mocha": "4.0.1",
@@ -44,7 +45,7 @@
   },
   "scripts": {
     "postinstall": "grunt clean",
-    "test": "node node_modules/mocha/bin/mocha test/ test/tf-parse/"
+    "test": "node node_modules/mocha/bin/mocha ./test/**/*.js"
   },
   "keywords": [
     "terraform",
