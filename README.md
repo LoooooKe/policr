@@ -1,8 +1,8 @@
 # Policr
 Policr is a continuous compliance tool for Cloud Infrastructure. This tool helps to implement Test Driven Development for Infrastructure code. Current support target is AWS provider and [Terraform](http://terraform.io) and Cloudformation provisioning tools
 
-[![Build Status](https://travis-ci.org/LoooooKe/cloudtool.svg?branch=develop)](https://travis-ci.org/LoooooKe/cloudtool)
-[![codecov](https://codecov.io/gh/LoooooKe/cloudtool/branch/develop/graph/badge.svg)](https://codecov.io/gh/LoooooKe/cloudtool)
+[![Build Status](https://travis-ci.org/LoooooKe/policr.svg?branch=develop)](https://travis-ci.org/LoooooKe/policr)
+[![codecov](https://codecov.io/gh/LoooooKe/policr/branch/develop/graph/badge.svg)](https://codecov.io/gh/LoooooKe/policr)
 
 ## Basic concept
 ![Policr workflow](/doc/images/ccc-workflow.png)
