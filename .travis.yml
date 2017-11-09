@@ -12,7 +12,7 @@ deploy:
      api_key:
          secure: $DEPLOY_TOKEN
      file:
-         - policr.zip
+         - build/policr.zip
      skip_cleanup: true
      on:
          repo: LoooooKe/policr

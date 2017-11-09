@@ -1,6 +1,6 @@
 {
   "name": "policr",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Cli tool for testing and provisioning with terraform as provisioner",
   "main": "lib/policr.js",
   "directories": {
