@@ -1,10 +1,10 @@
 const chai = global.chai;
 const expect = chai.expect;
 
-var plan = global.tfplan;
+var respurceMap = global.respurceMap;
 
 describe('aws_iam_user tests', function() {
-    var users = plan.all['aws_iam_user'];
+    var users = respurceMap.all['aws_iam_user'];
     if(users) {
         for (var key in users) {
             describe('Validate iam_user: ' + key, function() {
@@ -19,7 +19,7 @@ describe('aws_iam_user tests', function() {
 });
 
 describe('aws_s3_bucket tests', function() {
-    var buckets = plan.all['aws_s3_bucket'];
+    var buckets = respurceMap.all['aws_s3_bucket'];
     if(buckets) {
         for (var key in buckets) {
             describe('Validate s3 bucket: ' + key, function() {
