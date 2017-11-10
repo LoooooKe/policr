@@ -1,0 +1,9 @@
+[submodule "docs/themes/Mainroad"]
+	path = docs/themes/Mainroad
+	url = https://github.com/Vimux/Mainroad.git
+[submodule "docs/themes/elate"]
+	path = docs/themes/elate
+	url = https://github.com/saey55/hugo-elate-theme
+[submodule "docs/themes/icon"]
+	path = docs/themes/icon
+	url = https://github.com/SteveLane/hugo-icon.git
