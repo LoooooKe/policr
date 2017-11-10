@@ -1,14 +1,14 @@
 ---
-title: "Vision"
+title: "policr"
 date: 2017-11-10T17:15:04+01:00
 draft: true
 ---
 
  # Vision
- Achieving Continuous Compliance for Infrastructure Code development.
+ Achieving Continuous Compliance for Cloud Infrastructure Code development
 
 
- ## Rationale
+## Rationale
 
  To truly achieve DevOps, meaning Sysops with Development practices, the Red-Green-Refactor cycle must be adopted.
  For this to be achieved, test must be written before the creation of infrastructure provisioning code.
@@ -22,7 +22,7 @@ draft: true
  * Policy must be assigned to roles and not directly to users
 
 
- # Features
+## Features
 
  > Platform Agnostic - aims to support the main cloud providers
 
