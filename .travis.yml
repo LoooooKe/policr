@@ -5,7 +5,7 @@ before_install: npm install -g grunt-cli codecov istanbul
 install: npm install
 before_script: grunt build
 script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha ./test/**/*.js --reporter
+  - istanbul cover ./node_modules/mocha/bin/_mocha test/**/*.test.js --reporter
   - codecov
 deploy:
      provider: releases
