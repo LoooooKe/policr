@@ -5,7 +5,7 @@ Policr is a continuous compliance tool for Cloud Infrastructure. This tool helps
 [![codecov](https://codecov.io/gh/LoooooKe/policr/branch/develop/graph/badge.svg)](https://codecov.io/gh/LoooooKe/policr)
 
 ## Basic concept
-![Policr workflow](/doc/images/ccc-workflow.png)
+![Policr workflow](/docs/images/ccc-workflow.png)
 
 ## Build
     git checkout -b develop origin/develop
