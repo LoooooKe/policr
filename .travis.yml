@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "8"
+before_install: npm install -g grunt-cli codecov nyc
+install: npm install
+before_script: grunt build
+script:
+  - nyc ./node_modules/mocha/bin/_mocha $(find test -name '*.test.js')
+  - nyc report --reporter=text-lcov > coverage.lcov
+  - codecov
+deploy:
+     provider: releases
+     api_key:
+         secure: $DEPLOY_TOKEN
+     file:
+         - build/policr.zip
+     skip_cleanup: true
+     on:
+         repo: LoooooKe/policr
+         tags: true

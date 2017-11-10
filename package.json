@@ -1,0 +1,67 @@
+{
+  "name": "policr",
+  "version": "0.0.1",
+  "description": "Cli tool for testing and provisioning with terraform as provisioner",
+  "main": "lib/policr.js",
+  "directories": {
+    "lib": "lib",
+    "example": "example",
+    "test": "test",
+    "doc": "doc"
+  },
+  "dependencies": {
+    "aws-config": "1.1.3",
+    "aws-sdk": "2.145.0",
+    "aws-sdk-mock": "1.7.0",
+    "chai": "4.1.2",
+    "chai-fs": "^1.0.0",
+    "chai-string": "1.4.0",
+    "child_process": "1.0.2",
+    "cli": "1.0.1",
+    "clone-deep": "1.0.0",
+    "exit": "0.1.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-compress": "1.4.3",
+    "grunt-mocha-test": "0.13.3",
+    "grunt-run": "0.8.0",
+    "nyc": "11.3.0",
+    "jsonpath-plus": "0.16.0",
+    "lodash": "4.17.4",
+    "mocha": "4.0.1",
+    "mocha-jenkins-reporter": "0.3.10",
+    "proxy-agent": "2.1.0",
+    "q": "1.5.1",
+    "sinon": "4.1.1",
+    "strip-ansi": "4.0.0",
+    "traverse": "0.6.6"
+  },
+  "devDependencies": {
+    "pkg": "4.2.5",
+    "debug": "3.1.0",
+    "aws-sdk-mock": "1.7.0",
+    "sinon": "4.1.2",
+    "mock-fs": "4.4.2",
+    "mock-spawn": "0.2.6",
+    "mock-cli": "0.1.2"
+  },
+  "scripts": {
+    "postinstall": "grunt clean",
+    "test": "node node_modules/mocha/bin/mocha ./test/**/*.js"
+  },
+  "keywords": [
+    "terraform",
+    "test",
+    "testing",
+    "continuous",
+    "compliance",
+    "cc"
+  ],
+  "author": "Lukas Feuz",
+  "email": "feuzl1@bluewin.ch",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "8.3.0"
+  }
+}
