@@ -1,0 +1,25 @@
+publishDir= "../docs"
+BaseUrl= "/"
+theme = "air"
+LanguageCode= "en-US"
+Title= "policr"
+paginate = 5
+DisqusShortname = ""
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+
+[params]
+  description = "continuous compliance for cloud"
+  cover = "images/user.jpg"
+  author = "policr"
+  authorlocation = ""
+  authorwebsite = ""
+  bio= "my bio"
+  logo = "images/logo.png"
+  googleAnalyticsUserID = ""
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  RSSLink = ""
+  githubName = "policr"
+  twitterName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
