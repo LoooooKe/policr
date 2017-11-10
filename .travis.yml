@@ -5,7 +5,8 @@ before_install: npm install -g grunt-cli codecov nyc
 install: npm install
 before_script: grunt build
 script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter $(find test -name '*.test.js')
+  - nyc ./node_modules/mocha/bin/_mocha $(find test -name '*.test.js')
+  - nyc report --reporter=text-lcov > coverage.lcov
   - codecov
 deploy:
      provider: releases
