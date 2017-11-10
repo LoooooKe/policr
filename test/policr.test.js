@@ -2,7 +2,7 @@ var mockCli = require('mock-cli');
 var chai = require('chai');
 var expect = chai.expect;
 var sinon = require('sinon');
-var Q = require('Q');
+var Q = require('q');
 
 var argv = ['node', 'policr.js', 'tf-plan']; // Fake argv
 
