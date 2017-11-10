@@ -5,7 +5,7 @@ before_install: npm install -g grunt-cli codecov nyc
 install: npm install
 before_script: grunt build
 script:
-  - nyc npm test
+  - nyc ./node_modules/mocha/bin/_mocha $(find test -name '*.test.js')
   - codecov
 deploy:
      provider: releases
