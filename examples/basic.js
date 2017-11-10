@@ -1,10 +1,10 @@
 const chai = global.chai;
 const expect = chai.expect;
 
-var respurceMap = global.respurceMap;
+var resourceMap = global.resourceMap;
 
 describe('aws_iam_user tests', function() {
-    var users = respurceMap.all['aws_iam_user'];
+    var users = resourceMap.all['aws_iam_user'];
     if(users) {
         for (var key in users) {
             describe('Validate iam_user: ' + key, function() {
@@ -19,7 +19,7 @@ describe('aws_iam_user tests', function() {
 });
 
 describe('aws_s3_bucket tests', function() {
-    var buckets = respurceMap.all['aws_s3_bucket'];
+    var buckets = resourceMap.all['aws_s3_bucket'];
     if(buckets) {
         for (var key in buckets) {
             describe('Validate s3 bucket: ' + key, function() {
@@ -39,11 +39,11 @@ describe('aws_s3_bucket tests', function() {
 
 describe('aws_s3_bucket_policy tests', function() {
    it("Every s3 bucket must have a bucket policy set", function () {
-       var buckets = plan.all['aws_s3_bucket'];
-       var policies = plan.all['aws_s3_bucket_policy'];
+       var buckets = resourceMap.all['aws_s3_bucket'];
+       var policies = resourceMap.all['aws_s3_bucket_policy'];
        expect(policies).to.have.all.keys(buckets);
    });
-    var policies = plan.all['aws_s3_bucket_policy'];
+    var policies = resourceMap.all['aws_s3_bucket_policy'];
     if(policies) {
         for (var key in policies) {
             describe('Validate s3 bucket policy: ' + key, function() {
