@@ -26,7 +26,7 @@
     "grunt-contrib-compress": "1.4.3",
     "grunt-mocha-test": "0.13.3",
     "grunt-run": "0.8.0",
-    "istanbul": "^0.4.5",
+    "nyc": "11.3.0",
     "jsonpath-plus": "0.16.0",
     "lodash": "4.17.4",
     "mocha": "4.0.1",
@@ -41,7 +41,10 @@
     "pkg": "4.2.5",
     "debug": "3.1.0",
     "aws-sdk-mock": "1.7.0",
-    "sinon": "4.1.2"
+    "sinon": "4.1.2",
+    "mock-fs": "4.4.2",
+    "mock-spawn": "0.2.6",
+    "mock-cli": "0.1.2"
   },
   "scripts": {
     "postinstall": "grunt clean",

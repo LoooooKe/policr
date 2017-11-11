@@ -1,5 +1,9 @@
-var sinon = require('sinon');
+delete require.cache[require.resolve('../../../lib/importer/tf/tfRunner')];
 var chai = require('chai');
+var mockSpawn = require('mock-spawn');
+const mockFs = require('mock-fs');
+var spawnMock = mockSpawn();
+require('child_process').spawn = spawnMock;
 var expect = chai.expect;
 
 var TerraformRunner = require('../../../lib/importer/tf/tfRunner');
@@ -36,29 +40,54 @@ describe('TerrafromRunner tests', function() {
         });
     });
     describe('Execute terraform commands', function() {
-        var expectedCommand = function(expected) {
-            return function(cmd, callback) {
-                expect(cmd).to.eql(expected);
-                if(callback)
-                    callback();
-            };
-        };
-        var tf = null;
-        beforeEach('create terraformrunner mock', function() {
-            tf = new TerraformRunner('.');
+        describe("Execute terraform plan", function(){
+            it('should call terraform plan', function() {
+                spawnMock.setDefault(spawnMock.simple(0, 'plan'));
+                return tf.plan().then(function (data) {
+                    expect(data).to.be.eql('plan');
+                    expect(spawnMock.calls[0].command).to.be.eql('terraform plan');
+                });
+            });
         });
-        it("Execute terraform plan", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform plan'));
-            tf.plan();
+        describe("Execute terraform state with bad file", function(){
+            it('should call terraform refresh', function() {
+                spawnMock.setDefault(spawnMock.simple(0, 'state'));
+                return tf.state().then(function (data) {
+                    expect(data).to.be.eql('state');
+                }).fail(function (err) {
+                    expect(spawnMock.calls[1].command).to.be.eql('terraform refresh');
+                    expect(err).to.not.be.undefined;
+                });
+            });
         });
-        it.skip("Execute terraform state", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform refresh'));
-            tf.state();
+        describe("Execute terraform state with ", function(){
+            before(function() {
+                mockFs({
+                    'terraform.tfstate': 'testcontent'
+                });
+            });
+            it('should call terraform refresh', function() {
+                spawnMock.setDefault(spawnMock.simple(0, 'state'));
+                return tf.state().then(function (data) {
+                    expect(data).to.be.eql('testcontent');
+                    expect(spawnMock.calls[2].command).to.be.eql('terraform refresh');
+                }).fail(function (err) {
+                    expect(err).to.be.undefined;
+                });
+            });
+            after(function() {
+                mockFs.restore();
+            });
         });
 
-        it("Execute terraform refresh", function(){
-            sinon.stub(tf, 'execute').callsFake(expectedCommand('terraform refresh'));
-            tf.refresh();
+        describe("Execute terraform refresh", function(){
+            it('should call terraform refresh', function() {
+                spawnMock.setDefault(spawnMock.simple(0, 'refresh'));
+                return tf.refresh().then(function (data) {
+                    expect(data).to.be.undefined;
+                    expect(spawnMock.calls[3].command).to.be.eql('terraform refresh');
+                });
+            });
         });
     });
 });
