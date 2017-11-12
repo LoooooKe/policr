@@ -99,7 +99,7 @@ describe('Basic AWSRunner tests', function() {
             });
         });
     });
-    describe('Import IAM', function () {
+    describe.skip('Import IAM', function () {
         before(function() {
             AWS.mock('IAM', 'listUsers', function(callback) {
                 callback(null, {Users: [{UserName: 'User-0'},{UserName: 'User-1'},{UserName: 'User-2'}]});
@@ -119,7 +119,7 @@ describe('Basic AWSRunner tests', function() {
             });
         });
     });
-    describe('Import all details test', function() {
+    describe.skip('Import all details test', function() {
         this.timeout(3000);
         var resourceMap = {};
         resourceMap['tf-state-test-4234353453'] = 'aws_s3_bucket';
